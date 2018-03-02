@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_44"
+    android:id="@+id/title_root"
+    android:background="@drawable/shape_title_bottom_line"
+    android:orientation="horizontal"
+    android:visibility="visible"
+    android:paddingLeft="@dimen/padding_10"
+    android:paddingRight="@dimen/padding_10">
+
+    <ImageView
+        android:id="@+id/ivTitleLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/padding_40"
+        android:src="@drawable/selector_arrow_pre"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvTitleCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_10"
+        android:paddingRight="@dimen/padding_10"
+        android:textColor="@color/green_80c262"
+        android:textSize="@dimen/text_size_17"
+        tools:text="用户登录" />
+
+
+    <TextView
+        android:id="@+id/tvTitleRight"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:textColor="@color/black_4A4A4A"
+        android:textSize="@dimen/text_size_17"
+        tools:text="注册" />
+
+    <ImageView
+        android:id="@+id/ivTitleRight"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

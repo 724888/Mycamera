@@ -1,0 +1,231 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ABABAB"
+    android:fitsSystemWindows="true">
+
+    <!-- 显示预览图形 -->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_666666">
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageView
+            android:id="@+id/activity_camera_aperture"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_150"
+            android:adjustViewBounds="true"
+            android:minHeight="200dp"
+            android:scaleType="fitXY"
+             />
+
+        <ImageView
+            android:id="@+id/activity_camera_aperture1"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_150"
+            android:adjustViewBounds="true"
+            android:minHeight="200dp"
+            android:scaleType="fitXY"
+             />
+
+        <ImageView
+            android:id="@+id/top_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_150"
+            android:background="@color/black_000000"
+            />
+        <ImageView
+            android:id="@+id/bottom_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black_000000"
+            android:layout_below="@+id/activity_camera_aperture"
+            />
+        <ImageView
+            android:id="@+id/left_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black_000000"
+            android:layout_toLeftOf="@+id/activity_camera_aperture"
+            android:layout_alignTop="@+id/activity_camera_aperture"
+            />
+
+        <ImageView
+            android:id="@+id/right_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black_000000"
+            android:layout_toRightOf="@+id/activity_camera_aperture"
+            android:layout_alignTop="@+id/activity_camera_aperture"
+            />
+
+
+        <TextView
+            android:id="@+id/desc_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/activity_camera_aperture"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_10"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10"
+            android:text="请将行驶证主页置于方框内，左下角发证机关印章"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_12" />
+        <TextView
+            android:id="@+id/stamp_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/activity_camera_aperture1"
+            android:layout_alignLeft="@id/activity_camera_aperture1"
+            android:layout_centerVertical="true"
+            android:background="@drawable/stamp"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/title"
+            layout="@layout/include_title" />
+        <TextView
+            android:id="@+id/tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_centerInParent="true"
+            android:background="#45A4F7"
+            android:gravity="center"
+            android:minHeight="@dimen/margin_35"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10"
+            android:text="拍摄时避免反光，确保图像清晰，可提高识别正确率"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_12"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/panel_take_photo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/activity_camera_replay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/retake"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/activity_camera_makesure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/done"
+                android:textColor="@color/colorWhite"
+                android:textSize="22sp"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/takepicture"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/take_pic"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/activity_camera_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/panel_take_photo"
+            android:background="@color/black_000000" />
+
+        <LinearLayout
+            android:id="@+id/photo_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/panel_take_photo"
+            android:layout_centerVertical="true"
+            android:background="@color/black_000000"
+            android:orientation="horizontal"
+            android:visibility="visible" />
+
+
+        <RelativeLayout
+            android:id="@+id/camera_top"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:background="@color/transparent">
+
+            <ImageView
+                android:id="@+id/flashBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/camera_flash_off"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/focus_index"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@id/photo_area"
+            android:background="@drawable/cam_focus"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+</FrameLayout>
