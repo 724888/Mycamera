@@ -970,7 +970,7 @@ public class CameraActivity extends CameraBaseActivity  {
                     int begainy = y * bitmap.getHeight() / useHeight;
                     int height = mCperture.getHeight() * bitmap.getHeight() / useHeight;
                     Matrix matrix = new Matrix();
-                    Bitmap endbitmap = Bitmap.createBitmap(bitmap, begainx, begainy, width, height + 30, matrix, true);
+                    Bitmap endbitmap = Bitmap.createBitmap(bitmap, begainx, begainy, width, height + 10, matrix, true);
 
 
 
